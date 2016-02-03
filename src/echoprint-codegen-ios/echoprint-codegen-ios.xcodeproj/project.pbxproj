@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83D634651C5B4FA300E8688E /* EchoprintCodegen.h in Headers */ = {isa = PBXBuildFile; fileRef = 83D634631C5B4FA300E8688E /* EchoprintCodegen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83D634661C5B4FA300E8688E /* EchoprintCodegen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83D634641C5B4FA300E8688E /* EchoprintCodegen.mm */; };
 		9AAF51A713B2557800099790 /* Whitening.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 9AAF51A513B2557800099790 /* Whitening.cxx */; };
 		9AAF51A813B2557800099790 /* Whitening.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAF51A613B2557800099790 /* Whitening.h */; };
 		9AE5AA19139FB2620009FCD8 /* SubbandAnalysis.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AE5AA17139FB2620009FCD8 /* SubbandAnalysis.h */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83D634631C5B4FA300E8688E /* EchoprintCodegen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchoprintCodegen.h; sourceTree = "<group>"; };
+		83D634641C5B4FA300E8688E /* EchoprintCodegen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EchoprintCodegen.mm; sourceTree = "<group>"; };
 		9AAF51A513B2557800099790 /* Whitening.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Whitening.cxx; path = ../Whitening.cxx; sourceTree = SOURCE_ROOT; };
 		9AAF51A613B2557800099790 /* Whitening.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Whitening.h; path = ../Whitening.h; sourceTree = SOURCE_ROOT; };
 		9AE5AA17139FB2620009FCD8 /* SubbandAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubbandAnalysis.h; path = ../SubbandAnalysis.h; sourceTree = SOURCE_ROOT; };
@@ -124,6 +128,8 @@
 				C8D4AD4D137EF41100CD506D /* win_funcs.h */,
 				C8D4AD4E137EF41100CD506D /* win_unistd.h */,
 				C8D4AD22137EE85F00CD506D /* Supporting Files */,
+				83D634631C5B4FA300E8688E /* EchoprintCodegen.h */,
+				83D634641C5B4FA300E8688E /* EchoprintCodegen.mm */,
 			);
 			path = "echoprint-codegen-ios";
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 				C8D4AD68137EF41100CD506D /* Params.h in Headers */,
 				C8D4AD6D137EF41100CD506D /* win_funcs.h in Headers */,
 				C8D4AD6E137EF41100CD506D /* win_unistd.h in Headers */,
+				83D634651C5B4FA300E8688E /* EchoprintCodegen.h in Headers */,
 				9AE5AA19139FB2620009FCD8 /* SubbandAnalysis.h in Headers */,
 				9AAF51A813B2557800099790 /* Whitening.h in Headers */,
 			);
@@ -211,6 +218,7 @@
 			files = (
 				C8D4AD4F137EF41100CD506D /* AudioBufferInput.cxx in Sources */,
 				C8D4AD51137EF41100CD506D /* AudioStreamInput.cxx in Sources */,
+				83D634661C5B4FA300E8688E /* EchoprintCodegen.mm in Sources */,
 				C8D4AD53137EF41100CD506D /* Base64.cxx in Sources */,
 				C8D4AD55137EF41100CD506D /* Codegen.cxx in Sources */,
 				C8D4AD62137EF41100CD506D /* Fingerprint.cxx in Sources */,
@@ -227,6 +235,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8D4AD6F137EF5AC00CD506D /* echoprint-codegen-ios.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -235,7 +244,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -245,11 +254,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8D4AD6F137EF5AC00CD506D /* echoprint-codegen-ios.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
